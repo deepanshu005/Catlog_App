@@ -1,4 +1,4 @@
-# codepur
+# Catalog
 
 A new Flutter project.
 
