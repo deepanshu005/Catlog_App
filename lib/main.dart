@@ -1,4 +1,5 @@
 import 'package:codepur/pages/login_page.dart';
+import 'package:codepur/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:codepur/pages/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         //primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
+      //debugShowCheckedModeBanner: false, // to remove debug banner from right top corner
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
@@ -27,8 +29,8 @@ class MyApp extends StatelessWidget {
       routes: {
         // it needs map
         "/": (context) => LoginPage(), // Bydefault will be login page
-        "/home": (context) => HomePage(),
-        "/Login": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }
