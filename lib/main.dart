@@ -21,11 +21,13 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         //primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
-      //debugShowCheckedModeBanner: false, // to remove debug banner from right top corner
+      debugShowCheckedModeBanner:
+          false, // to remove debug banner from right top corner
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      //initialRoute: "/home", // initially this will be the bydefault page
+      initialRoute:
+          MyRoutes.homeRoute, // initially this will be the bydefault page
       routes: {
         // it needs map
         "/": (context) => LoginPage(), // Bydefault will be login page
