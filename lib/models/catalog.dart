@@ -1,5 +1,5 @@
 class Item {
-  final String? id;
+  final int? id;
   final String? name;
   final String? desc;
   final num? price;
@@ -9,13 +9,15 @@ class Item {
   Item({this.id, this.name, this.desc, this.price, this.color, this.image});
 }
 
-final products = [
-  Item(
-      id: "Deepanshu005",
-      name: "Poco M2 Pro",
-      desc: "Sexy looks with Punch hole ",
-      price: 13999,
-      color: "#33505a",
-      image:
-          " https://images-eu.ssl-images-amazon.com/images/I/41ZcSXaHLYL._SX300_SY300_QL70_FMwebp_.jpg"),
-];
+class CatalogModel {
+  static final items = [
+    Item(
+        id: 005,
+        name: "Poco M2 Pro",
+        desc: "Sexy looks with Punch hole ",
+        price: 13999,
+        color: "#33505a",
+        image:
+            "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"),
+  ];
+}
