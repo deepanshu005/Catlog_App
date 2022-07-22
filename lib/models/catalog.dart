@@ -4,13 +4,14 @@ import 'dart:convert';
 class CatalogModel {
   static List<Item> items = [
     Item(
-        id: 1,
-        name: "Poco M2 Pro",
-        desc: "Sexy looks with Punch hole ",
-        price: 999,
-        color: "#33505a",
-        image:
-            "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"),
+      id: 0,
+      name: "Poco M2 Pro",
+      desc: "Sexy looks with Punch hole ",
+      price: 999,
+      color: "#33505a",
+      image:
+          "https://static.toiimg.com/thumb/resizemode-4,msid-76833666,imgsize-500,width-800/76833666.jpg",
+    )
   ];
 }
 
