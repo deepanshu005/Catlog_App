@@ -54,13 +54,26 @@ class CatalogItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              catalog.name.text.lg.color(MyTheme.darkBluishColor).make(),
+              catalog.name.text.lg.color(context.accentColor).make(),
               catalog.desc.text.textStyle(context.captionStyle).make(),
               10.heightBox,
+              "\$${catalog.price}".text.bold.xl4.red800.make(),
+              ElevatedButton(
+                onPressed: () {},
+                child: "Add to cart".text.make(),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                    context.theme.buttonColor,
+                  ),
+                  shape: MaterialStateProperty.all(
+                    StadiumBorder(),
+                  ),
+                ),
+              ).wh(100, 50),
             ],
           ))
         ],
       ),
-    ).white.roundedLg.square(150).make().py16();
+    ).color(context.cardColor).rounded.square(150).make().py16();
   }
 }

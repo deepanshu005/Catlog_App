@@ -1,3 +1,4 @@
+import 'package:CATALOG/pages/cart_page.dart';
 import 'package:CATALOG/pages/login_page.dart';
 import 'package:CATALOG/utils/routes.dart';
 import 'package:CATALOG/widgets/themes.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // context holds the information of widget's loacation
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner:
           false, // to remove debug banner from right top corner
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginPage(), // Bydefault will be login page
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.cartRoute: (context) => CartPage(),
       },
     );
   }
