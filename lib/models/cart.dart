@@ -1,11 +1,15 @@
 import 'package:CATALOG/models/catalog.dart';
 
 class CartModel {
-  CatalogModel _catalog;
+  static final cartModel = CartModel._internal();
+  CartModel._internal();
+  factory CartModel() => cartModel;
+
+  CatalogModel? _catalog;
   //Collection of Ids - store ids of each item
   final List<int> _itemIds = [];
 
-  CatalogModel get catalog => _catalog;
+  CatalogModel get catalog => _catalog!;
 
   set catalog(CatalogModel newCatalog) {
     assert(newCatalog != null);
@@ -13,7 +17,7 @@ class CartModel {
   }
 
   //get items in the cart
-  List<Item> get items => _itemIds.map((id) => _catalog.getById(id)).toList();
+  List<Item> get items => _itemIds.map((id) => _catalog!.getById(id)).toList();
 
   //Get total price
   num get totalPrice =>
