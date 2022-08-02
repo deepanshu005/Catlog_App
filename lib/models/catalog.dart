@@ -6,13 +6,19 @@ class CatalogModel {
     Item(
       id: 0,
       name: "Poco M2 Pro",
-      desc: "Sexy looks with Punch hole ",
+      desc: "Beutiful looks with Punch hole ",
       price: 999,
       color: "#33505a",
       image:
           "https://static.toiimg.com/thumb/resizemode-4,msid-76833666,imgsize-500,width-800/76833666.jpg",
     )
   ];
+  //get by id
+  static Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  //get item by position
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
