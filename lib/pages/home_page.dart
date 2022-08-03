@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:CATALOG/models/catalog.dart';
 import 'package:CATALOG/utils/routes.dart';
 import 'package:CATALOG/widgets/themes.dart';
